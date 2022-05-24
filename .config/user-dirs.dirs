@@ -1,0 +1,8 @@
+XDG_TEMPLATES_DIR="$HOME/Alpha/"
+XDG_PUBLICSHARE_DIR="$HOME/Delta/"
+XDG_DESKTOP_DIR="$HOME/Delta/Desktop/"
+XDG_DOCUMENTS_DIR="$HOME/Delta/Interface/"
+XDG_DOWNLOAD_DIR="$HOME/Delta/Lambda/"
+XDG_MUSIC_DIR="$HOME/Delta/Monolith/"
+XDG_PICTURES_DIR="$HOME/Delta/Studio/"
+XDG_VIDEOS_DIR="$HOME/Delta/Zeta/"

@@ -1,0 +1,9 @@
+window:
+  decorations: None
+  padding:
+    x: 14
+    y: 14
+  opacity: 0.95
+  dimensions:
+    columns: 144
+    lines: 44

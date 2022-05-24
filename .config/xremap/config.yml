@@ -1,0 +1,5 @@
+modmap:
+  - name: Global
+    remap:
+      BTN_LEFT: BTN_RIGHT
+      BTN_RIGHT: BTN_LEFT 

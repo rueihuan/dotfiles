@@ -1,0 +1,40 @@
+format = """
+[\u2800](fg:#1c4961 bg:#1c4961)\
+$directory\
+[\uE0B0](fg:#1c4961 bg:black)\
+
+[\uE0B0](fg:black bg:#05716c)\
+$git_branch\
+[\uE0B0](fg:#05716c bg:black)\
+
+[\uE0B0](fg:black bg:#cfb845)\
+$git_status\
+[\uE0B0](fg:#cfb845 bg:black)\
+
+[\uE0B0](fg:black bg:white)\
+$time\
+[\uE0B0](fg:white bg:none)\
+
+[\u2800](fg:none bg:none)\
+$all\
+$character\
+"""
+
+add_newline = true
+
+[directory]
+format = "[ $path ]($style)"
+style = "bold bg:#1c4961 fg:white"
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+style = "bold bg:#05716c fg:white"
+
+[git_status]
+format = "[ $all_status$ahead_behind ]($style)"
+style = "bold bg:#cfb845 fg:black"
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+style = "bold bg:white fg:black"

@@ -1,0 +1,37 @@
+[user]
+	name = rueihuan
+	email = rueihuan@outlook.com
+[http]
+	postBuffer = 524288000
+[alias]
+	ca = commit --amend -m
+	cam = commit -am
+	cm = commit -m
+	co = checkout
+	cp = cherry-pick
+	lg = log --decorate --oneline --graph --all -6
+	main = checkout main
+	dev = checkout dev
+	sm = submodule
+	smf = submodule foreach
+	ss = status
+	throw = reset --hard HEAD
+[push]
+	default = current
+[branch "dev"]
+	merge = refs/heads/dev
+[core]
+	editor = vim
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	side-by-side = true
+	navigate = true
+	line-number = true
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[init]
+	defaultBranch = main

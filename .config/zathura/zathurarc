@@ -1,0 +1,32 @@
+# main:
+set font "monospace normal 9"
+set adjust-open width
+set guioptions sv
+set statusbar-v-padding 1
+set statusbar-h-padding 1
+set page-padding 1
+set pages-per-row 1
+set scroll-page-aware true
+set scroll-full-overlap 0.1
+set scroll-step 120
+set smooth-scroll true
+set link-zoom false
+set window-title-home-tilde true
+set window-title-page true
+set page-thumbnail-size 9000000
+set pages-per-row 5
+set selection-clipboard clipboard
+set zoom-setp 3
+
+# colors:
+set default-bg \#ffffff
+set default-fg \#ffffff
+
+set statusbar-bg \#ffffff
+set statusbar-fg \#121212
+
+set recolor false
+set recolor-keephue true
+set recolor-darkcolor \#BDE090
+set recolor-lightcolor \#000000
+
