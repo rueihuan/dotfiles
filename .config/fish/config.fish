@@ -4,9 +4,6 @@ if status is-interactive
 
     alias waycon "vi ~/.config/wayfire.ini"
 	alias fishcon "vi ~/.config/fish/config.fish"
-    alias cron "crontab -l"
-    alias croncon "vi ~/.config/crontab"
-    alias cronmk "crontab ~/.config/crontab; cron"
 
 	alias cat "bat -A"
     alias lg lazygit
