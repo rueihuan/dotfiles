@@ -6,7 +6,7 @@ if status is-interactive
 
     alias cp "cp -i"
     alias mv "mv -i"
-    alias rm "mv -i"
+    alias rm "rm -i"
 
     alias cat "bat -A"
     alias lg lazygit
