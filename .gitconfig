@@ -16,8 +16,10 @@
 	smf = submodule foreach
 	ss = status
 	throw = reset --hard HEAD
-    unchanged = update-index --assume-unchanged
-    changed = update-index --no-assume-unchanged
+    unchange = update-index --assume-unchanged
+    unchanged-ls = !git ls-files -v | grep -e "^h"
+    change = update-index --no-assume-unchanged
+    change-all = update-index --really-refresh
 [push]
 	default = current
 [branch "dev"]
