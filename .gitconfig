@@ -16,6 +16,8 @@
 	smf = submodule foreach
 	ss = status
 	throw = reset --hard HEAD
+    unchanged = update-index --assume-unchanged
+    changed = update-index --no-assume-unchanged
 [push]
 	default = current
 [branch "dev"]
