@@ -10,8 +10,7 @@
 	co = checkout
 	cp = cherry-pick
 	lg = log --decorate --oneline --graph --all -6
-	main = checkout main
-	dev = checkout dev
+    push-current = "!f() { git push \"$1\" \"$(git branch --show-current):$2\"; }; f"
 	sm = submodule
 	smf = submodule foreach
 	ss = status
