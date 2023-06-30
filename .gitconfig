@@ -4,13 +4,11 @@
 [http]
 	postBuffer = 524288000
 [alias]
-	ca = commit --amend -m
-	cam = commit -am
 	cm = commit -m
 	co = checkout
 	cp = cherry-pick
 	lg = log --decorate --oneline --graph --all -6
-	push-current = "!bash -c 'f() { git push \"$1\" \"$(git branch --show-current)\" \"$2\"; }; f'"
+	push-current = "!bass f() { git push $1 $(git branch --show-current) $2';' }';' f"
 	sm = submodule
 	smf = submodule foreach
 	ss = status
