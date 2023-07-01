@@ -1,6 +1,7 @@
 if status is-interactive
-    #if test "$TERM" = "alacritty" 
+    if test "$TERM" = "alacritty"
         starship init fish | source
-    #end
+        fastfetch --load-config paleofetch
+    end
 end
 

@@ -2,18 +2,10 @@ if status is-interactive
     alias clr clear
 
     alias waycon "vi ~/.config/wayfire.ini"
-    alias fishcon "vi ~/.config/fish/config.fish"
 
     alias cp "cp -i"
     alias mv "mv -i"
     alias rm "rm -i"
-
-    alias cat "bat -A"
-    alias lg lazygit
-
-    alias ls lsd
-    alias la "ls -A"
-    alias ll "ls -lA"
 
     alias p pnpm
     alias px "pnpm dlx"
@@ -23,5 +15,20 @@ if status is-interactive
     alias top btop
 
     alias y yay
+
+    alias la "ls -A"
+    alias ll "ls -lA"
+
+    function cat
+        command -sq bat; and command bat $argv; or command cat $argv
+    end
+
+    function git
+        command -sq "bass git"; and command bass git $argv; or command git $argv
+    end
+
+    function ls
+        command -sq lsd; and command lsd $argv; or command ls $argv
+    end
 end
 
