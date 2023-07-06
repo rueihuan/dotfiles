@@ -10,6 +10,7 @@
 	lg = log --decorate --oneline --graph --all -6
 	br = branch
 	br-cur = branch --show-current
+	pull-current= "!f() { git pull \"$1\" \"$(git branch --show-current)\" \"$2\"; }; f"
 	push-current= "!f() { git push \"$1\" \"$(git branch --show-current)\" \"$2\"; }; f"
 	sm = submodule
 	smf = submodule foreach
