@@ -1,8 +1,12 @@
 [Default Applications]
+application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
+application/epub+zip=org.pwmt.zathura-pdf-mupdf.desktop
+application/json=vim.desktop;
 text/html=google-chrome.desktop
+text/plain=vim.desktop
+text/x-log=vim.desktop;
 x-scheme-handler/http=google-chrome.desktop
 x-scheme-handler/https=google-chrome.desktop
 x-scheme-handler/about=google-chrome.desktop
 x-scheme-handler/unknown=google-chrome.desktop
-application/pdf=org.pwmt.zathura.desktop
 x-scheme-handler/gitkraken=GitKraken.desktop
