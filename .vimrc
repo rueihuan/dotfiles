@@ -56,9 +56,8 @@ hi Normal guibg=NONE ctermbg=NONE
 " ----------------------------------------------------------------
 let mapleader="\<Space>"
 
-" Doc
-" 主要有map，noremap，unmap，mapclear四个 命令，并且有四个前缀i,c,n,v修饰
-" nore表示非递归，mapclear表示清楚映射
+" map，noremap，unmap，mapclear: support 4 prefixes - i,c,n,v
+" nore: no recursion
 
 " Figlet
 noremap <leader>fl :r !figlet -f larry3d 
