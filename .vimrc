@@ -46,8 +46,10 @@ set fileencodings=ucs-bom,utf-8,chinese
 " Mouse Support
 set mouse=a
 " Theme
-colo koehler
 syntax on
+colo koehler
+hi NonText ctermbg=none
+hi Normal guibg=NONE ctermbg=NONE
 
 " ----------------------------------------------------------------
 " <leader> Key
