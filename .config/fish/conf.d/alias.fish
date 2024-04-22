@@ -15,6 +15,7 @@ if status is-interactive
     alias top btop
 
     alias y yay
+    alias vi nvim
 
     alias la "ls -A"
     alias ll "ls -lA"
