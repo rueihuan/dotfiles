@@ -10,8 +10,6 @@
 	lg = log --decorate --oneline --graph --all -6
 	br = branch
 	br-cur = branch --show-current
-	pull-current= "!f() { git pull \"$1\" \"$(git branch --show-current)\" \"$2\"; }; f"
-	push-current= "!f() { git push \"$1\" \"$(git branch --show-current)\" \"$2\"; }; f"
 	sm = submodule
 	smf = submodule foreach
 	ss = status
@@ -26,6 +24,7 @@
 [core]
 	editor = vim
 	pager = delta
+	fileMode = false
 [interactive]
 	diffFilter = delta --color-only
 [delta]
@@ -38,3 +37,7 @@
 	colorMoved = default
 [init]
 	defaultBranch = main
+[pull]
+	rebase = true
+[includeIf "gitdir:/Users/r0c0jly/"]
+    path = .gitconfig-walmart
