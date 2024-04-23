@@ -6,6 +6,19 @@
 " /_/  /_/  _\__, /      _____/  /_/  /_/ /_/ /_//_/ |_| \____/   
 "           /____/                                                
 " ================================================================
+
+" ----------------------------------------------------------------
+" Plugin
+" ----------------------------------------------------------------
+call plug#begin()
+
+Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+
+call plug#end()
+
+" ----------------------------------------------------------------
+" Configs
+" ----------------------------------------------------------------
 set nobackup
 set noswapfile
 set history=1024
@@ -47,7 +60,7 @@ set fileencodings=ucs-bom,utf-8,chinese
 set mouse=a
 " Theme
 syntax on
-colo koehler
+colorscheme embark
 hi NonText ctermbg=none
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -104,3 +117,4 @@ nmap <leader><cr> :nohlsearch<cr>
 nmap <leader><leader> V
 
 inoremap jj <Esc>
+
