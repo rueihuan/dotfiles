@@ -39,5 +39,5 @@
 	defaultBranch = main
 [pull]
 	rebase = true
-[includeIf "gitdir:/Users/r0c0jly/"]
+[includeIf "gitdir:/Users/r0c0jly/Documents/"]
     path = .gitconfig-walmart
