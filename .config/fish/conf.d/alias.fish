@@ -14,7 +14,7 @@ if status is-interactive
 
     alias top btop
 
-    alias y yay --removemake
+    alias y yay
     alias vi vim
 
     alias la "ls -A"
