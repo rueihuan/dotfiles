@@ -52,7 +52,6 @@ set smartindent
 set tabstop=4
 set expandtab
 set softtabstop=4
-"set foldmethod=indent
 set ts=4
 set sw=4
 " Decimal Format, default Octal
@@ -60,7 +59,6 @@ set nrformats=
 " Chinese Encode
 set encoding=utf-8
 set termencoding=utf-8
-set fileencoding=utf8
 set fileencodings=ucs-bom,utf-8,chinese
 " Mouse Support
 set mouse=a
