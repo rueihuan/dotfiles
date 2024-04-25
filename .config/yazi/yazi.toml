@@ -1,0 +1,27 @@
+[opener]
+edit = [
+	{ run = 'vim "$@"', block = true },
+]
+read = [
+	{ run = 'zathura "$@"', desc = "Read" },
+]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]
+
+[open]
+rules = [
+	{ mime = "text/*", use = "edit" },
+	{ mime = "video/*", use = "play" },
+
+	{ name = "*.json", use = "edit" },
+	{ name = "*.pdf", use = "read" },
+	{ name = "*.epub", use = "read" },
+
+	# Multiple openers for a single rule
+	{ name = "*.html", use = [ "open", "edit" ] },
+]
+
