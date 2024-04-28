@@ -1,17 +1,22 @@
 format = """
 [░▒▓](#1c4961)\
+
 $directory\
-[\uE0B0](fg:#1c4961 bg:black)\
-[\uE0B0](fg:black bg:#05716c)\
+[\uE0B0](fg:#1c4961 bg:#292A2B)\
+[\uE0B0](fg:#292A2B bg:#05716c)\
+
 $git_branch\
-[\uE0B0](fg:#05716c bg:black)\
-[\uE0B0](fg:black bg:#cfb845)\
+[\uE0B0](fg:#05716c bg:#292A2B)\
+[\uE0B0](fg:#292A2B bg:#cfb845)\
+
 $git_status\
-[\uE0B0](fg:#cfb845 bg:black)\
-[\uE0B0](fg:black bg:white)\
+[\uE0B0](fg:#cfb845 bg:#292A2B)\
+[\uE0B0](fg:#292A2B bg:white)\
+
 $time\
 [\uE0B0](fg:white bg:none)\
 [\u2800](fg:none bg:none)\
+
 $all\
 $character\
 """
@@ -34,3 +39,4 @@ style = "bold bg:#cfb845 fg:black"
 disabled = false
 format = "[ $time ]($style)"
 style = "bold bg:white fg:black"
+

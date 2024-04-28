@@ -13,6 +13,7 @@ if status is-interactive
     alias pi "pip install --user -U"
 
     alias top btop
+    alias lf yazi
 
     alias y yay
     alias vi vim

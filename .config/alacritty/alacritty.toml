@@ -25,6 +25,9 @@ opacity = 0.9
 padding.x = 10
 padding.y = 10
 
+dimensions.columns = 116
+dimensions.lines = 40
+
 #decorations = "Transparent"
 #decorations_theme_variant = "Light" # "Dark"
 
