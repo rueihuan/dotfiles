@@ -6,6 +6,9 @@ set -Ux VISUAL vim
 
 switch (uname)
     case Linux
+        # set -x GTK_IM_MODULE fcitx
+        set -x QT_IM_MODULE fcitx
+        set -x XMODIFIERS @im=fcitx
     case Darwin
     case '*'
 end
