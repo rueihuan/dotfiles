@@ -19,20 +19,20 @@
 # https://github.com/alacritty/alacritty/tree/master#configuration
 
 [window]
-
 opacity = 0.9
-
-padding.x = 10
-padding.y = 10
-
-dimensions.columns = 116
-dimensions.lines = 40
 
 #decorations = "Transparent"
 #decorations_theme_variant = "Light" # "Dark"
 
-[font]
+[window.padding]
+x = 10
+y = 10
 
+#[window.dimensions]
+#columns = 216
+#lines = 140
+
+[font]
 normal.family = "Hack Nerd Font"
 #bold.family = "Hack Nerd Font"
 #italic.family = "Hack Nerd Font"
