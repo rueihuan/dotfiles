@@ -19,7 +19,7 @@ set selection-clipboard clipboard
 set zoom-setp 3
 
 # colors:
-set default-bg \#ffffff
+set default-bg \#222230
 set default-fg \#ffffff
 
 set statusbar-bg \#ffffff
