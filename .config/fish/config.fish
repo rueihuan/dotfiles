@@ -5,6 +5,12 @@ set -Ux PAGER less
 set -Ux EDITOR vim
 set -Ux VISUAL vim
 
+if command -v fnm > /dev/null
+    fnm env --use-on-cd --shell fish | source
+else
+    echo "fnm is not installed"
+end
+
 switch (uname)
     case Linux
     case Darwin
