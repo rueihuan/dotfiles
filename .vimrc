@@ -18,7 +18,7 @@ endif
 
 call plug#begin()
 
-Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -64,7 +64,7 @@ set fileencodings=ucs-bom,utf-8,chinese
 set mouse=a
 " Theme
 syntax on
-colorscheme embark
+colorscheme dracula
 hi NonText ctermbg=none
 hi Normal guibg=NONE ctermbg=NONE
 
