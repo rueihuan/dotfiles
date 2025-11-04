@@ -21,8 +21,8 @@
 [window]
 opacity = 0.9
 
-#decorations = "Transparent"
-#decorations_theme_variant = "Light" # "Dark"
+#decorations = "None"
+decorations_theme_variant = "Dark"
 
 [window.padding]
 x = 10
