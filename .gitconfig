@@ -41,3 +41,5 @@
   rebase = true
 [includeIf "gitdir/i:/Users/ruihuchen/Documents/"]
   path = .gitconfig-paypal.ini
+[url "git@github.com:rueihuan/"]
+  insteadOf = https://github.com/rueihuan/
