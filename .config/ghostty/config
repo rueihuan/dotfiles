@@ -10,7 +10,7 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
-font-size = 13
+font-size = 18
 font-family = Hack Nerd Font
 
 theme = Catppuccin Macchiato

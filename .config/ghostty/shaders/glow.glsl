@@ -81,8 +81,42 @@ const vec3[24] samples = {
   vec3(-2.8769733643574344, 3.9652268864187157, 0.20412414523193154)
 };
 
+// --- Tunable glow parameters ---
+
+// Lightness threshold below which a pixel is considered "dim" and receives glow
+// from nearby bright pixels. Pixels above this are considered self-luminous.
+// Default: 0.35
 const float DIM_CUTOFF = 0.35;
+
+// Lightness threshold above which a pixel is considered "bright" and contributes
+// stronger glow. Pixels between DIM_CUTOFF and BRIGHT_CUTOFF contribute weaker glow.
+// Default: 0.65
 const float BRIGHT_CUTOFF = 0.65;
+
+// How much to boost the lightness of already-bright pixels (multiplicative).
+// 1.0 = no boost, 1.2 = 20% brighter. Makes lit text pop.
+// Default: 1.2
+const float BRIGHT_BOOST = 1.15;
+
+// Controls the spatial spread of the glow blur. Higher = wider glow radius.
+// The sample offsets are multiplied by this value (in pixels).
+// Default: 1.414
+const float GLOW_SPREAD = 1.3;
+
+// How much neighboring bright pixels bleed their color (a/b channels in Oklab)
+// into dim pixels. Higher = more colorful halos around text.
+// Default: 0.3
+const float COLOR_BLEED = 0.23;
+
+// Lightness glow contribution from neighbors that are moderately bright
+// (between DIM_CUTOFF and BRIGHT_CUTOFF).
+// Default: 0.05
+const float DIM_GLOW_STRENGTH = 0.04;
+
+// Lightness glow contribution from neighbors that are very bright
+// (above BRIGHT_CUTOFF). Typically ~2x DIM_GLOW_STRENGTH.
+// Default: 0.10
+const float BRIGHT_GLOW_STRENGTH = 0.08;
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 uv = fragCoord.xy / iResolution.xy;
@@ -90,27 +124,23 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec4 dest = source;
 
     if (source.x > DIM_CUTOFF) {
-        dest.x *= 1.2;
-        // dest.x = 1.2;
+        dest.x *= BRIGHT_BOOST;
     } else {
-        vec2 step = vec2(1.414) / iResolution.xy;
+        vec2 step = vec2(GLOW_SPREAD) / iResolution.xy;
         vec3 glow = vec3(0.0);
         for (int i = 0; i < 24; i++) {
             vec3 s = samples[i];
             float weight = s.z;
             vec4 c = toOklab(texture(iChannel0, uv + s.xy * step));
             if (c.x > DIM_CUTOFF) {
-                glow.yz += c.yz * weight * 0.3;
+                glow.yz += c.yz * weight * COLOR_BLEED;
                 if (c.x <= BRIGHT_CUTOFF) {
-                    glow.x += c.x * weight * 0.05;
+                    glow.x += c.x * weight * DIM_GLOW_STRENGTH;
                 } else {
-                    glow.x += c.x * weight * 0.10;
+                    glow.x += c.x * weight * BRIGHT_GLOW_STRENGTH;
                 }
             }
         }
-        // float lightness_diff = clamp(glow.x - dest.x, 0.0, 1.0);
-        // dest.x = lightness_diff;
-        // dest.yz = dest.yz * (1.0 - lightness_diff) + glow.yz * lightness_diff;
         dest.xyz += glow.xyz;
     }
 

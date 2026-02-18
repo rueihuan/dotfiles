@@ -39,7 +39,5 @@
 	defaultBranch = main
 [pull]
     rebase = true
-[includeIf "gitdir/i:/Users/ruihuchen/Documents/"]
-    path = .gitconfig-paypal.ini
 [includeIf "gitdir/i:/Users/ruihuchen/"]
-    path = .gitconfig-company.ini
+    path = .gitconfig-paypal.ini
