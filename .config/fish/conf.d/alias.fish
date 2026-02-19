@@ -1,9 +1,8 @@
 if status is-interactive
     alias clr clear
 
-    alias zj "zellij attach -c alpha-session options --theme dracula"
-
-    alias waycon "vi ~/.config/wayfire.ini"
+    alias zj "zellij attach -c alpha-session options --theme night-owl"
+    alias ff fastfetch
 
     alias cp "cp -i"
     alias mv "mv -i"
@@ -19,6 +18,7 @@ if status is-interactive
 
     alias y yay
     alias vi vim
+    alias nvi nvim
 
     alias la "ls -A"
     alias ll "ls -lA"
