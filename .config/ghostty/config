@@ -20,8 +20,10 @@ window-padding-y = 5
 
 mouse-hide-while-typing = true
 
-background-opacity = 0.97
+background-opacity = 0.95
+background-blur = true
 
 custom-shader = shaders/glow.glsl
 custom-shader = shaders/cursor_smear.glsl
 
+macos-icon = official
