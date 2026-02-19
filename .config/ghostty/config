@@ -28,4 +28,6 @@ custom-shader = shaders/cursor_smear.glsl
 
 confirm-close-surface = false
 
-macos-icon = official
+macos-icon = custom
+macos-custom-icon = ~/.config/ghostty/Ghostty.icns
+

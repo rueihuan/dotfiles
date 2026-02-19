@@ -86,7 +86,7 @@ const vec3[24] samples = {
 // Lightness threshold below which a pixel is considered "dim" and receives glow
 // from nearby bright pixels. Pixels above this are considered self-luminous.
 // Default: 0.35
-const float DIM_CUTOFF = 0.45;
+const float DIM_CUTOFF = 0.4;
 
 // Lightness threshold above which a pixel is considered "bright" and contributes
 // stronger glow. Pixels between DIM_CUTOFF and BRIGHT_CUTOFF contribute weaker glow.
@@ -96,7 +96,7 @@ const float BRIGHT_CUTOFF = 0.95;
 // How much to boost the lightness of already-bright pixels (multiplicative).
 // 1.0 = no boost, 1.2 = 20% brighter. Makes lit text pop.
 // Default: 1.2
-const float BRIGHT_BOOST = 1.15;
+const float BRIGHT_BOOST = 1.13;
 
 // Controls the spatial spread of the glow blur. Higher = wider glow radius.
 // The sample offsets are multiplied by this value (in pixels).
@@ -106,17 +106,17 @@ const float GLOW_SPREAD = 1.414;
 // How much neighboring bright pixels bleed their color (a/b channels in Oklab)
 // into dim pixels. Higher = more colorful halos around text.
 // Default: 0.3
-const float COLOR_BLEED = 0.2;
+const float COLOR_BLEED = 0.3;
 
 // Lightness glow contribution from neighbors that are moderately bright
 // (between DIM_CUTOFF and BRIGHT_CUTOFF).
 // Default: 0.05
-const float DIM_GLOW_STRENGTH = 0.02;
+const float DIM_GLOW_STRENGTH = 0.03;
 
 // Lightness glow contribution from neighbors that are very bright
 // (above BRIGHT_CUTOFF). Typically ~2x DIM_GLOW_STRENGTH.
 // Default: 0.10
-const float BRIGHT_GLOW_STRENGTH = 0.04;
+const float BRIGHT_GLOW_STRENGTH = 0.06;
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     vec2 uv = fragCoord.xy / iResolution.xy;
