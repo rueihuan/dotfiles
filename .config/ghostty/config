@@ -11,7 +11,7 @@
 # a full restart to take effect.
 
 font-size = 16
-font-family = Hack Nerd Font
+font-family = Hack Nerd Font Mono
 
 theme = Catppuccin Macchiato
 
