@@ -1,6 +1,8 @@
 if status is-interactive
     alias clr clear
 
+    alias zj "zellij attach -c alpha-session options --theme dracula"
+
     alias waycon "vi ~/.config/wayfire.ini"
 
     alias cp "cp -i"
