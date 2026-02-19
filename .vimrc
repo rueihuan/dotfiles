@@ -49,9 +49,9 @@ set fileencodings=ucs-bom,utf-8,chinese
 set mouse=a
 " Theme
 syntax on
-colorscheme darkblue
 hi NonText ctermbg=none
 hi Normal guibg=NONE ctermbg=NONE
+"colorscheme darkblue
 
 inoremap jj <Esc>
 
