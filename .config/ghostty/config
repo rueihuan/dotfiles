@@ -10,7 +10,7 @@
 # reloaded while running; some only apply to new windows and others may require
 # a full restart to take effect.
 
-font-size = 18
+font-size = 16
 font-family = Hack Nerd Font
 
 theme = Catppuccin Macchiato
@@ -25,5 +25,7 @@ background-blur = true
 
 custom-shader = shaders/glow.glsl
 custom-shader = shaders/cursor_smear.glsl
+
+confirm-close-surface = false
 
 macos-icon = official
