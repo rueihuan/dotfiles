@@ -5,6 +5,8 @@ set -Ux PAGER less
 set -Ux EDITOR vim
 set -Ux VISUAL vim
 
+fish_vi_key_bindings
+
 if command -v fnm > /dev/null
     fnm env --use-on-cd --shell fish | source
 else

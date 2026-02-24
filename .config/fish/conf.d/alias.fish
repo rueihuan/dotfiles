@@ -18,7 +18,6 @@ if status is-interactive
 
     alias y yay
     alias vi vim
-    alias nvi nvim
 
     alias la "ls -A"
     alias ll "ls -lA"
