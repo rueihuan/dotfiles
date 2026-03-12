@@ -1,0 +1,95 @@
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // Appearance
+  "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_size": 20,
+  "icon_theme": "Material Icon Theme",
+  "theme": "Nordfox - opaque",
+  "ui_font_family": "Hack Nerd Font",
+  "ui_font_size": 20,
+
+  // Input
+  "base_keymap": "VSCode",
+  "hide_mouse": "on_typing_and_movement",
+  "vim_mode": true,
+
+  // Editor
+  "always_treat_brackets_as_autoclosed": true,
+  "auto_signature_help": true,
+  "colorize_brackets": true,
+  "disable_ai": true,
+  "hard_tabs": false,
+  "hover_popover_enabled": true,
+  "indent_guides": {
+    "active_line_width": 1,
+    "background_coloring": "indent_aware",
+    "coloring": "indent_aware",
+  },
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "relative_line_numbers": "enabled",
+  "show_whitespaces": "all",
+  "tab_size": 2,
+  "tabs": {
+    "close_position": "left",
+    "file_icons": true,
+    "git_status": false,
+  },
+
+  // Panels
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "debugger": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "collapse_untracked_diff": false,
+    "sort_by_path": false,
+    "tree_view": true,
+    "status_style": "icon",
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "project_panel": {
+    "dock": "right",
+  },
+  "terminal": {
+    "button": false,
+  },
+
+  // Session
+  "restore_on_startup": "launchpad",
+  "session": {
+    "restore_unsaved_buffers": true,
+    "trust_all_worktrees": false,
+  },
+
+  // Extensions
+  "auto_install_extensions": {
+    "color-highlight": true,
+    "comment": true,
+    "dependi": true,
+    "docker-compose": false,
+    "dockerfile": true,
+    "emoji-completions": true,
+    "html": true,
+    "markdownlint": true,
+    "material-icon-theme": true,
+    "nvim-nightfox": true,
+  },
+
+  // Privacy
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}
